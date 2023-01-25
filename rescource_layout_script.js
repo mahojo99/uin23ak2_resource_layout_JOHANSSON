@@ -95,33 +95,64 @@ const resources = [
     },
 ]
 
-/* 
-function listResources() {
-    let resourceListHTML = ""
-    resources.map(prod => {
-        resourceListHTML += `
-        <nav>
-            <a class="active" href="kategori1.html">Kategori 1</a>
-            <a href="kategori2.html">Kategori 2</a>
-            <a href="kategori2.html">Kategori 3</a>
-            <a href="kategori2.html">Kategori 4</a>
-            <a href="kategori2.html">Kategori 5</a>
-        </nav>
-        <main>
-            <h2>Kategori 1</h2>
-            <article>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Praesent placerat, nisl non venenatis vestibulum, nulla diam tempor est, ut vehicula elit dui eu elit. 
-                    Pellentesque quis mauris ipsum. Morbi sed lacus sit amet eros porta hendrerit. 
-                    Nunc pretium ligula in imperdiet pretium. Nunc nec lorem lobortis, porta massa quis, egestas metus. 
-                    Vivamus non est at lectus facilisis rutrum nec ac odio. Sed pulvinar placerat arcu vitae dignissim.
-                </p>
-            </article>
-        `
-    })
-    document.getElementById("product-list").innerHTML = resourceListHTML
-}
-//Kjør opplisting av produkter så de synes når vi laster inn siden
-listProducts()
 
-*/
+
+
+let main = document.getElementById("main")
+
+let btnOne = document.getElementById("HTML");
+let btnTwo = document.getElementById("CS");
+let btnThree = document.getElementById("JS");
+let btnFour = document.getElementById("REACT");
+let btnFive = document.getElementById("CMS");
+
+
+function renderContent() {
+    main.innerHTML = `<h2>${resources[0].category}</h2><p>${resources[0].text}</p><ul>`;
+    for (let i = 0; i < resources[0].sources.length; i++) {
+        main.innerHTML += `<li><a href="${resources[0].sources[i].url}">${resources[0].sources[i].title}</a></li>`;
+    }
+    main.innerHTML += `</ul>`;
+}
+
+renderContent();
+
+btnOne.addEventListener("click", function(){
+    main.innerHTML = `<h2>${resources[0].category}</h2><p>${resources[0].text}</p><ul>`;
+    for (let i = 0; i < resources[0].sources.length; i++) {
+        main.innerHTML += `<li><a href="${resources[0].sources[i].url}">${resources[0].sources[i].title}</a></li>`;
+    }
+    main.innerHTML += `</ul>`;
+});
+
+btnTwo.addEventListener("click", function(){
+    main.innerHTML = `<h2>${resources[1].category}</h2><p>${resources[1].text}</p><ul>`;
+    for (let i = 0; i < resources[1].sources.length; i++) {
+        main.innerHTML += `<li><a href="${resources[1].sources[i].url}">${resources[1].sources[i].title}</a></li>`;
+    }
+    main.innerHTML += `</ul>`;
+});
+
+btnThree.addEventListener("click", function(){
+    main.innerHTML = `<h2>${resources[2].category}</h2><p>${resources[2].text}</p><ul>`;
+    for (let i = 0; i < resources[2].sources.length; i++) {
+        main.innerHTML += `<li><a href="${resources[2].sources[i].url}">${resources[2].sources[i].title}</a></li>`;
+    }
+    main.innerHTML += `</ul>`;
+});
+
+btnFour.addEventListener("click", function(){
+    main.innerHTML = `<h2>${resources[3].category}</h2><p>${resources[3].text}</p><ul>`;
+    for (let i = 0; i < resources[3].sources.length; i++) {
+        main.innerHTML += `<li><a href="${resources[3].sources[i].url}">${resources[3].sources[i].title}</a></li>`;
+    }
+    main.innerHTML += `</ul>`;
+});
+
+btnFive.addEventListener("click", function(){
+    main.innerHTML = `<h2>${resources[4].category}</h2><p>${resources[4].text}</p><ul>`;
+    for (let i = 0; i < resources[4].sources.length; i++) {
+        main.innerHTML += `<li><a href="${resources[4].sources[i].url}">${resources[4].sources[i].title}</a></li>`;
+    }
+    main.innerHTML += `</ul>`;
+});

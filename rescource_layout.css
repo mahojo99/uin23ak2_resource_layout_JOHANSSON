@@ -63,6 +63,7 @@ nav a.active {
     background-color: var(--lightblue);
     color: var(--white);
     border: none;
+    transition: ease-in-out .5s;
 }
 
 main{
@@ -85,3 +86,4 @@ article ul {
 article ul li a {
     color: var(--lightblue);
 }
+
